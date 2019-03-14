@@ -38,7 +38,8 @@ bool checkThree(int a){
     int i = 999;
     while(i !=100){
         i--;
-        if((a/i) > 100 && (a/i) == floor((a/i)) ){
+   
+        if((a/i) > 100 && (a/i) < 999 && double(a)/double(i) == floor((a/i)) ){
             return 1;
         }
         
