@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\wade.abel\desktop\projecteuler\sumsquaredifference\sumsquaredifference\source.cpp(20): warning C4244: '+=': conversion from 'double' to '__int64', possible loss of data
+  sumSquareDifference.vcxproj -> C:\Users\wade.abel\Desktop\projectEuler\sumSquareDifference\Debug\sumSquareDifference.exe
+  sumSquareDifference.vcxproj -> C:\Users\wade.abel\Desktop\projectEuler\sumSquareDifference\Debug\sumSquareDifference.pdb (Partial PDB)
