@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\wade.abel\desktop\projecteuler\nthprime\nthprime\source.cpp(37): warning C4018: '<': signed/unsigned mismatch
+  nthPrime.vcxproj -> C:\Users\wade.abel\Desktop\projectEuler\nthPrime\Debug\nthPrime.exe
+  nthPrime.vcxproj -> C:\Users\wade.abel\Desktop\projectEuler\nthPrime\Debug\nthPrime.pdb (Partial PDB)
