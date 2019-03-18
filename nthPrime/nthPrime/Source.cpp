@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 
 // 10001st prime
@@ -57,7 +58,7 @@ int main() {
 // Return true if a number is prime 
 int isPrime(int n) {
 
-	for (size_t i = 2; i < n; i++) {
+	for (size_t i = 2; i < (sqrt(n)) + 1; i++) {
 
 		if (n % i == 0) {
 
