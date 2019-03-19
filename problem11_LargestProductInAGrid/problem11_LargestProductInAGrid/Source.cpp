@@ -1,10 +1,26 @@
 #include <iostream>
 #include <array>
-#include <iomanip>
-#include <map>
+
+//Largest product in a grid
+
+//Problem 11
+//In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+
+
+//The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+
+//What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
 
 
+
+
+
+
+
+
+
+//Make grid into a 2-dementional array
 
 std::array<std::array<int, 20>, 20> arr{ {
 	{ 8, 2, 22, 97, 38, 15, 0, 40, 0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91, 8 },
@@ -29,6 +45,27 @@ std::array<std::array<int, 20>, 20> arr{ {
 	{ 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48 }
 	} };
 
+
+
+
+//Set a variable to capture the higest product as you iterate through the array in squares of 4 x 4 as follows
+
+//while j is not > 16    |  while j is not > 16 && i is not greater than 16
+//                       |
+// (n)(n)(n)(n)          |     (n) n  n  n
+//  n  n  n  n           |      n (n) n  n
+//  n  n  n  n           |      n  n (n) n
+//  n  n  n  n           |      n  n  n (n)
+
+//while i is not > 16    |  while i is not > 16 && j is not greater than 16
+//                       |
+// (n) n  n  n           |      n  n  n (n)
+// (n) n  n  n           |      n  n (n) n
+// (n) n  n  n           |      n (n) n  n
+// (n) n  n  n           |     (n) n  n  n
+
+
+
 int main() {
 	long long max = 1;
 
@@ -42,11 +79,11 @@ int main() {
 
 					max = arr[i][j] * arr[i][j + 1] * arr[i][j + 2] * arr[i][j + 3];
 				}
-				if (i < 17) {
-					if ((arr[i][j] * arr[i + 1][j + 1] * arr[i + 2][j + 2] * arr[i + 3][j + 3]) > max) {
+                if (i < 17) {
+                    if ((arr[i][j] * arr[i + 1][j + 1] * arr[i + 2][j + 2] * arr[i + 3][j + 3]) > max) {
 
-						max = arr[i][j] * arr[i + 1][j + 1] * arr[i + 2][j + 2] * arr[i + 3][j + 3];
-					}
+                        max = arr[i][j] * arr[i + 1][j + 1] * arr[i + 2][j + 2] * arr[i + 3][j + 3];
+                    }
 				}
 
 			}
@@ -62,9 +99,9 @@ int main() {
 					if ((arr[i][j + 3] * arr[i + 1][j + 2] * arr[i + 2][j + 1] * arr[i + 3][j]) > max) {
 
 						max = arr[i][j + 3] * arr[i + 1][j + 2] * arr[i + 2][j + 1] * arr[i + 3][j];
-					}
-				}
-				}
+                    }
+                }
+            }
 
 			}
 
